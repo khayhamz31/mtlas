@@ -1,0 +1,36 @@
+Sets up required libraries (openml, pandas, numpy) and directory structure
+Downloads datasets from OpenML using their API:
+
+Can specify how many datasets to download (e.g. n_datasets = 10)
+Can filter by task type (classification/regression/all)
+Applies basic filters (e.g. minimum instances, features)
+
+
+For each dataset, extracts two types of information:
+
+Metadata: Basic information like dataset ID, name, number of instances/features, etc.
+Meta-features: Detailed characteristics/qualities of the dataset (like class entropy, dimensionality, etc.)
+
+
+Saves the information in two separate CSV files:
+
+metadata_cache.csv: Contains basic dataset information
+meta_features_cache.csv: Contains all dataset qualities and characteristics
+
+
+Includes caching functionality:
+
+Remembers previously downloaded datasets
+Only downloads new datasets when run again
+Stores downloaded datasets in a local directory
+
+
+Includes visualization capabilities to analyze dataset properties:
+
+Dataset size distribution
+Feature count distribution
+Class distribution (for classification tasks)
+
+
+
+The notebook is structured to support meta-learning research by gathering datasets and their characteristics in an organized way.
